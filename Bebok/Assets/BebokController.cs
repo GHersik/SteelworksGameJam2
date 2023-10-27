@@ -8,7 +8,7 @@ public class BebokController : MonoBehaviour
     private float moveX, moveY;
 
 
-    void FixedUpdate()
+    void Update()
     {
         moveX = Input.GetAxisRaw("Horizontal") * moveSpeed;
         moveY = Input.GetAxisRaw("Vertical") * moveSpeed;
