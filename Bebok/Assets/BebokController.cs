@@ -4,6 +4,8 @@ public class BebokController : MonoBehaviour
 {
     [SerializeField]
     float moveSpeed = 10f;
+    [SerializeField]
+    CircleCollider2D circleTrigerCollider;
 
     private float moveX, moveY;
 
@@ -15,10 +17,22 @@ public class BebokController : MonoBehaviour
         Vector3 moveVector = new Vector3(moveX, moveY);
 
         transform.Translate(moveVector * Time.deltaTime);
+        
+        //if input
     }
 
     public void SetSpeed(float newSpeed)
     {
         moveSpeed = newSpeed;
+    }
+
+    void CheckSurroundings()
+    {
+        circleTrigerCollider.enabled = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("DD");
     }
 }
