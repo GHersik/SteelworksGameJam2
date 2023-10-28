@@ -6,6 +6,7 @@ using static UnityEngine.ParticleSystem;
 public class Lamp : MonoBehaviour, IInteractable {
     [Header("Settings")]
     [SerializeField] float interactionTime;
+    [SerializeField] GameObject noiseMaker;
     public float InteractionTime {
         get { return interactionTime; }
         set { interactionTime = value; }
@@ -20,16 +21,19 @@ public class Lamp : MonoBehaviour, IInteractable {
     public void InteractInterrupted() {
         Debug.Log("Interaction with the object interrupted!");
         particles.Stop();
+        noiseMaker.SetActive(false);
     }
 
     public void InteractStart() {
         particles.Play();
+            noiseMaker.SetActive(true);
         Debug.Log("I have came into interaction with the player!");
     }
 
     public void InteractEnd() {
         Debug.Log("Interaction with the object is concluded!");
         particles.Stop();
+        noiseMaker.SetActive(false);
     }
 
     public void HighLight() {
