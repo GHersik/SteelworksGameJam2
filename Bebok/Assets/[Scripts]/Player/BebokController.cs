@@ -14,6 +14,10 @@ public class BebokController : MonoBehaviour {
         set { maxEnergy = value; }
     }
 
+    [Header("Animation Settings")]
+    [SerializeField] Animator animator;
+    [SerializeField] SpriteRenderer spriteRenderer;
+
     private float currentEnergy;
     public float CurrentEnergy {
         get { return currentEnergy; }
@@ -34,6 +38,8 @@ public class BebokController : MonoBehaviour {
         GatherInputs();
         UpdateEnergy();
         Move();
+        FlipDirection();
+        SprintAnimation();
     }
 
     private void GatherInputs() {
@@ -52,6 +58,20 @@ public class BebokController : MonoBehaviour {
         currentMoveSpeed = Mathf.Lerp(currentMoveSpeed, desiredMoveSpeed, acceleration * Time.deltaTime);
         Vector3 movementDirection = new Vector3(moveX, moveY);
         transform.Translate(movementDirection * currentMoveSpeed * Time.deltaTime);
+
+        if (movementDirection.x != 0 || movementDirection.y != 0) {
+            animator.SetBool("isWalking", true);
+        }
+        else {
+            animator.SetBool("isWalking", false);
+        }
+    }
+
+    private void FlipDirection() {
+        if (moveX > 0)
+            spriteRenderer.flipX = true;
+        else if(moveX < 0)
+            spriteRenderer.flipX = false;
     }
 
     private void UpdateEnergy() {
@@ -64,5 +84,12 @@ public class BebokController : MonoBehaviour {
             desiredMoveSpeed = moveSpeed;
         if (currentEnergy > 20)
             currentEnergy = maxEnergy;
+    }
+
+    private void SprintAnimation() {
+        if (desiredMoveSpeed == sprintMoveSpeed)
+            animator.SetBool("isSprinting",true);
+        else
+            animator.SetBool("isSprinting", false);
     }
 }
