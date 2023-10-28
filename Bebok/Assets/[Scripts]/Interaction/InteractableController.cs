@@ -30,10 +30,11 @@ public class InteractableController : MonoBehaviour {
         }
     }
 
-    private void InteractionStart() {
+    private void InteractionStart() {     
         currentInteractable.InteractStart();
         currentInteractionTime = Time.time + currentInteractable.InteractionTime;
 
+        interactionTimer.PositionPanel(currentInteractable.InteractablePosition);
         interactionTimer.StartCountdown(currentInteractable.InteractionTime);
     }
 

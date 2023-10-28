@@ -19,6 +19,10 @@ public class InteractionTimer : MonoBehaviour {
         panel = GetComponent<CanvasGroup>();
     }
 
+    public void PositionPanel(Vector3 positionToPlace) {
+        this.transform.position = positionToPlace;
+    }
+
     public void StartCountdown(float time) {
         timeAmountCountdown = time;
         fillAmountNeeded = Time.time + timeAmountCountdown;
