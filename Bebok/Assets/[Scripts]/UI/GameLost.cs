@@ -5,7 +5,7 @@ using DG.Tweening;
 using System;
 using UnityEngine.UI;
 
-public class PauseMenu : MonoBehaviour {
+public class GameLost  : Singleton<GameLost>{
     [Header("Settings")]
     [SerializeField] float fadeTime = .4f;
     [SerializeField] Button mainMenuButton;
@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour {
     bool isActive;
     CanvasGroup loadingPanel;
 
+
     private void Start() {
         loadingPanel = GetComponent<CanvasGroup>();
 
@@ -21,31 +22,13 @@ public class PauseMenu : MonoBehaviour {
         quitGameButton.onClick.AddListener(QuitGameButton_clicked);
     }
 
-    private void Update() {
-        GatherInputs();
-    }
 
-    private void MainMenuButton_clicked() => ScenesLoader.Instance.LoadMainMenu();
+
+    private void MainMenuButton_clicked() => ScenesLoader.Instance.LoadNewGame();
 
     private void QuitGameButton_clicked() => ScenesLoader.Instance.QuitGame();
 
-    void GatherInputs() {
-        if (GameManager.Instance.gameState == GameManager.GameStates.Finished) 
-            return;
-        
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            if (isActive) {
-                isActive = false;
-                HidePanel();
-            }
-            else {
-                isActive = true;
-                ShowPanel();
-            }
-        }
-    }
-
-    private void ShowPanel() {
+    public void ShowPanel() {
         loadingPanel.DOKill();
         loadingPanel.DOFade(1, fadeTime).SetUpdate(true).OnComplete(SetInteractable);
         Time.timeScale = 0;

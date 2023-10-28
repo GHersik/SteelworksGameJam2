@@ -24,6 +24,7 @@ public class BebokController : MonoBehaviour {
         set { currentEnergy = value; }
     }
 
+    private bool isInputActive;
     private float moveX, moveY;
     private float currentMoveSpeed;
     private float desiredMoveSpeed;
@@ -32,6 +33,13 @@ public class BebokController : MonoBehaviour {
         currentMoveSpeed = moveSpeed;
         desiredMoveSpeed = moveSpeed;
         currentEnergy = maxEnergy;
+
+        isInputActive = true;
+    }
+
+    public void SetInput(bool state) {
+        isInputActive = state;
+        Debug.Log(isInputActive);
     }
 
     private void Update() {
@@ -43,6 +51,13 @@ public class BebokController : MonoBehaviour {
     }
 
     private void GatherInputs() {
+        if (!isInputActive) {
+            moveX = 0;
+            moveY = 0;
+            Debug.Log("Cannot interact!");
+            return;
+        }
+
         moveX = Input.GetAxisRaw("Horizontal");
         moveY = Input.GetAxisRaw("Vertical");
 
@@ -70,7 +85,7 @@ public class BebokController : MonoBehaviour {
     private void FlipDirection() {
         if (moveX > 0)
             spriteRenderer.flipX = true;
-        else if(moveX < 0)
+        else if (moveX < 0)
             spriteRenderer.flipX = false;
     }
 
@@ -88,7 +103,7 @@ public class BebokController : MonoBehaviour {
 
     private void SprintAnimation() {
         if (desiredMoveSpeed == sprintMoveSpeed)
-            animator.SetBool("isSprinting",true);
+            animator.SetBool("isSprinting", true);
         else
             animator.SetBool("isSprinting", false);
     }

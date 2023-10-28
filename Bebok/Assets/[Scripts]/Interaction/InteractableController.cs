@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteractableController : MonoBehaviour {
     [SerializeField] InteractionTimer interactionTimer;
+    [SerializeField] Animator animator;
+    [SerializeField] BebokController playerController;
 
     IInteractable currentInteractable;
     float currentInteractionTime;
@@ -15,12 +17,16 @@ public class InteractableController : MonoBehaviour {
 
     private void GatherInputs() {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            if (currentInteractable != null)
+            if (currentInteractable != null) {
                 InteractionStart();
+                playerController.SetInput(false);
+            }
         }
         if (Input.GetKeyUp(KeyCode.Space)) {
-            if (currentInteractable != null && currentInteractionTime != 0)
+            if (currentInteractable != null && currentInteractionTime != 0) {
                 HandleInteractionAction();
+                playerController.SetInput(true);
+            }
         }
     }
 
@@ -30,7 +36,8 @@ public class InteractableController : MonoBehaviour {
         }
     }
 
-    private void InteractionStart() {     
+    private void InteractionStart() {
+        animator.SetBool("isInteracting", true);
         currentInteractable.InteractStart();
         currentInteractionTime = Time.time + currentInteractable.InteractionTime;
 
@@ -46,11 +53,14 @@ public class InteractableController : MonoBehaviour {
             currentInteractable.InteractInterrupted();
             currentInteractionTime = 0;
             interactionTimer.HidePanel();
+            animator.SetBool("isInteracting", false);
         }
     }
 
     private void InteractionEnd() {
         if (currentInteractable != null) {
+            animator.SetBool("isInteracting", false);
+            playerController.SetInput(true);
             currentInteractable.InteractEnd();
             currentInteractionTime = 0;
             interactionTimer.HidePanel();
@@ -81,6 +91,7 @@ public class InteractableController : MonoBehaviour {
                 if (currentInteractionTime != 0)
                     interactable.InteractInterrupted();
                 interactable.LowLight();
+                animator.SetBool("isInteracting", false);
                 ResetInteraction();
             }
         }

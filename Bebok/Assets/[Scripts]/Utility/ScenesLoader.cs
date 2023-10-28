@@ -20,6 +20,7 @@ public class ScenesLoader : SingletonPersistent<ScenesLoader> {
     public void LoadNewGame() => StartCoroutine(LoadScene(Scene.Journey));
 
     private IEnumerator LoadScene(Scene scene) {
+        Time.timeScale = 1;
         ShowPanel();
 
         yield return new WaitForSeconds(1f);
