@@ -30,9 +30,4 @@ public class BebokController : MonoBehaviour
     {
         circleTrigerCollider.enabled = true;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("DD");
-    }
 }
