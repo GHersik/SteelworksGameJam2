@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -9,6 +10,7 @@ public class NPC : MonoBehaviour
     [SerializeField] PathPointsCollection pathPointsCollection;
 
     NavMeshAgent agent;
+    PathPointController pathPointController;
 
     private void Start()
     {
@@ -16,21 +18,21 @@ public class NPC : MonoBehaviour
         targetPoints = pathPointsCollection.ListPoints();
         agent = GetComponent<NavMeshAgent>();
         pathPoint = GetRandomTargetPoint();
-        GoToDestination();
+        StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
     }
     private void Update()
     {
-        if (!agent.hasPath) 
+        if (!agent.hasPath)
         {
             pathPoint = GetRandomTargetPoint();
-            GoToDestination();
+            StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
         }
     }
 
     public void SetPathToBebok(Transform bebok)
     {
         pathPoint = bebok;
-        GoToDestination();
+        StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
     }
 
     void GoToDestination()
@@ -40,8 +42,14 @@ public class NPC : MonoBehaviour
 
     Transform GetRandomTargetPoint()
     {
-        int randomPoint = Random.Range(0, targetPoints.Count-1);
+        int randomPoint = Random.Range(0, targetPoints.Count - 1);
+        pathPointController = targetPoints[randomPoint].GetComponent<PathPointController>();
         return targetPoints[randomPoint];
     }
 
+    IEnumerator WaitNearPoint(float waiting)
+    {
+        yield return new WaitForSecondsRealtime(waiting);
+        GoToDestination();
+    }
 }
