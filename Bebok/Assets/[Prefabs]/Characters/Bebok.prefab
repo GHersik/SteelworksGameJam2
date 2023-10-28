@@ -671,9 +671,17 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 6491730339687888269, guid: 28bdc1354bb5afc45b422cf91490c48c, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 6981662757653100096}
+    - target: {fileID: 6491730339687888269, guid: 28bdc1354bb5afc45b422cf91490c48c, type: 3}
       propertyPath: interactionTimer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6491730339687888269, guid: 28bdc1354bb5afc45b422cf91490c48c, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 7887526919875954863}
     - target: {fileID: 6964669788059328559, guid: 28bdc1354bb5afc45b422cf91490c48c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
