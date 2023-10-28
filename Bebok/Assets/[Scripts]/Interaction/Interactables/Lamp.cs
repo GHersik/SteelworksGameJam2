@@ -11,6 +11,8 @@ public class Lamp : MonoBehaviour, IInteractable {
         set { interactionTime = value; }
     }
 
+    public Vector3 InteractablePosition { get => this.transform.position; set => this.transform.position = value; }
+
     [SerializeField] ParticleSystem particles;
     [SerializeField] SpriteRenderer outlineSprite;
     [SerializeField] Color outlineColor;
