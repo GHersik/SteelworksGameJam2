@@ -43,7 +43,8 @@ public class BebokBehaviour : MonoBehaviour {
         }
         if (collision.transform.gameObject.layer == 6)//6layer to enenmy
         {
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            GameManager.Instance.LoseGame();
         }
 
         if (collision.transform.gameObject.name == "Becik")
