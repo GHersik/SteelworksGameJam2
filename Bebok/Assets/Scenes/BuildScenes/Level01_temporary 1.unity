@@ -3399,6 +3399,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2258170727036335235, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
+      propertyPath: m_Radius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956271914821287325, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
+      propertyPath: craddleLocalization
+      value: 
+      objectReference: {fileID: 1104634789}
     - target: {fileID: 7183880579559112336, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
       propertyPath: m_Name
       value: Becik
