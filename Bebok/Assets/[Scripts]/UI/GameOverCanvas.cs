@@ -27,7 +27,7 @@ public class GameOverCanvas : MonoBehaviour {
 
     private void LoadLevelAgain_clicked() => ScenesLoader.Instance.LoadCurrentLevel();
 
-    private void QuitGameButton_clicked() => ScenesLoader.Instance.QuitGame();
+    private void QuitGameButton_clicked() => ScenesLoader.Instance.LoadLevel2();
 
     public void ShowPanel() {
         loadingPanel.DOKill();
