@@ -25,9 +25,15 @@ public class PauseMenu : MonoBehaviour {
         GatherInputs();
     }
 
-    private void MainMenuButton_clicked() => ScenesLoader.Instance.LoadMainMenu();
+    private void MainMenuButton_clicked() {
+        Time.timeScale = 1;
+        ScenesLoader.Instance.LoadMainMenu();
+    }
 
-    private void QuitGameButton_clicked() => ScenesLoader.Instance.QuitGame();
+    private void QuitGameButton_clicked() {
+        Time.timeScale = 1;
+        ScenesLoader.Instance.QuitGame();
+    }
 
     void GatherInputs() {
         if (GameManager.Instance.gameState == GameManager.GameStates.Finished) 
