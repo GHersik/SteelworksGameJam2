@@ -117,7 +117,6 @@ MonoBehaviour:
   sprite: {fileID: 6338241962143879853}
   enemyChaser: {fileID: 730589025406085410}
   becik: {fileID: 0}
-  bebokController: {fileID: 7887526919875954863}
 --- !u!70 &506356982720026531
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -232,7 +231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad187a2e10bd6e4fbe3c68739f13209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedModifier: 1
   moveSpeed: 2
   sprintMoveSpeed: 3
   acceleration: 5
