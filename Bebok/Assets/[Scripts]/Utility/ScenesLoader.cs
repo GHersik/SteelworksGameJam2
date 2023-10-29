@@ -15,9 +15,13 @@ public class ScenesLoader : Singleton<ScenesLoader> {
     [SerializeField] CanvasGroup loadingPanel;
     [SerializeField] float fadeTime;
 
+    Scene currentScene;
+
     public void QuitGame() => Application.Quit();
 
     public void LoadMainMenu() => StartCoroutine(LoadScene(Scene.MainMenu));
+
+    public void LoadCurrentLevel() => StartCoroutine(LoadScene(currentScene));
 
     public void LoadNewGame() => StartCoroutine(LoadScene(Scene.Level01));
 
@@ -26,6 +30,8 @@ public class ScenesLoader : Singleton<ScenesLoader> {
     public void LoadLevel3() => StartCoroutine(LoadScene(Scene.Level03));
 
     private IEnumerator LoadScene(Scene scene) {
+        currentScene = scene;
+
         if (scene == Scene.MainMenu)
             MusicManager.Instance.MainMenuTransition();
         else
