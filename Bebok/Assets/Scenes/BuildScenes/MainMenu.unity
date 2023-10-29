@@ -8627,14 +8627,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicManager
       objectReference: {fileID: 0}
-    - target: {fileID: 7182209698730226213, guid: d4637fb45fd2ffe4682fe6d764dcaf67, type: 3}
-      propertyPath: soundFadeTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7182209698730226213, guid: d4637fb45fd2ffe4682fe6d764dcaf67, type: 3}
-      propertyPath: soundHardcoreFadeTime
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
