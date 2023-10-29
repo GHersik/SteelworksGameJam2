@@ -2510,6 +2510,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1139787730096492509, guid: 6b5853541564aa34a9b7ba642c998364, type: 3}
+      propertyPath: points.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1139787730096492509, guid: 6b5853541564aa34a9b7ba642c998364, type: 3}
+      propertyPath: points.Array.data[0]
+      value: 
+      objectReference: {fileID: 237602379}
+    - target: {fileID: 1139787730096492509, guid: 6b5853541564aa34a9b7ba642c998364, type: 3}
+      propertyPath: points.Array.data[1]
+      value: 
+      objectReference: {fileID: 1547166461}
     - target: {fileID: 3517570402432267604, guid: 6b5853541564aa34a9b7ba642c998364, type: 3}
       propertyPath: m_Name
       value: PathPoints
