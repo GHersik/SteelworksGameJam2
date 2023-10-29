@@ -22,7 +22,7 @@ public class NPC : MonoBehaviour
     }
     private void Update()
     {
-        if (!agent.hasPath)
+        if (!agent.hasPath )
         {
             pathPoint = GetRandomTargetPoint();
             StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
@@ -33,6 +33,12 @@ public class NPC : MonoBehaviour
     {
         pathPoint = bebok;
         StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
+    }
+
+    public void SetPathToCraddle(Transform craddle)
+    {
+        pathPoint = craddle;
+        GoToDestination();
     }
 
     void GoToDestination()
@@ -52,4 +58,5 @@ public class NPC : MonoBehaviour
         yield return new WaitForSecondsRealtime(waiting);
         GoToDestination();
     }
+
 }
