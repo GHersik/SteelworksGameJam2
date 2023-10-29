@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6653504015975178356}
   - component: {fileID: 4098901589647119983}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ray (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 436722646876496494}
   - component: {fileID: 7936263786874649784}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ray (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7462720241964800195}
   - component: {fileID: 725934543251712704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ray (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6979290109980453999}
   - component: {fileID: 8780996992508591766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 6777050447219758834}
   - component: {fileID: 5136261064629817506}
   - component: {fileID: 2233908722883079473}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SampleEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.8828125
-  m_BaseOffset: 0.44140625
+  m_BaseOffset: 0.02
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &5136261064629817506
@@ -344,7 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5444183765624833535}
   - component: {fileID: 2694779329227828810}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ray (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
