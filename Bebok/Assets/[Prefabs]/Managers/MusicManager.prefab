@@ -179,6 +179,8 @@ MonoBehaviour:
   secondChannel: {fileID: 4563680830804859548}
   thirdChannel: {fileID: 1802081950683180029}
   soundFadeTime: 0.5
+  soundHardcoreFadeTime: 2
+  fadeCurve: 0
   backgroundMusic: {fileID: 8300000, guid: 084354a1c37170c46b8fb2abecc6552b, type: 3}
   backgroundMusicHard: {fileID: 8300000, guid: 56b2cb20272672047ad8df4ac0937807, type: 3}
   menuMusic: {fileID: 8300000, guid: 7ca2d2488455aa74189b0e42fc333ee4, type: 3}
