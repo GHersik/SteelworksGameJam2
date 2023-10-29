@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ce347f9a1f6414d4c9548361207523c6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -177,11 +177,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstChannel: {fileID: 6608432462121202560}
   secondChannel: {fileID: 4563680830804859548}
-  thirdChannel: {fileID: 0}
+  thirdChannel: {fileID: 7498126965011125588}
   soundFadeTime: 1
-  soundHardcoreFadeTime: 1
-  hardCoreEase: 1
+  soundHardcoreFadeTime: 2
+  hardCoreEase: 4
   backgroundMusic: {fileID: 8300000, guid: 5c28d1ba8675b514bb02ecd5e0b01fe8, type: 3}
+  backgroundHardMusic: {fileID: 0}
   menuMusic: {fileID: 8300000, guid: ef2f557dde5f51e43a430a3a6c946de5, type: 3}
 --- !u!1 &6545145221269342941
 GameObject:
