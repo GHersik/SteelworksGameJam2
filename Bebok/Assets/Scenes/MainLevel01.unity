@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 2
+  noiseMaker: {fileID: 0}
   particles: {fileID: 1225044605}
   outlineSprite: {fileID: 2058339152}
   outlineColor: {r: 0, g: 1, b: 0.63529414, a: 0}
@@ -1736,6 +1737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionTime: 2
+  noiseMaker: {fileID: 0}
   particles: {fileID: 1443096995}
   outlineSprite: {fileID: 469265295}
   outlineColor: {r: 0, g: 1, b: 0.63529414, a: 0}
@@ -5955,7 +5957,7 @@ MonoBehaviour:
   m_VoxelSize: 0.1
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 44f32d57620e4e748afe9f34e00a0b26, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 71e6f5c771b2c87449c81366c0c4ea94, type: 2}
 --- !u!224 &954863566 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8592200482501479155, guid: 616b7a305a6ae384aa5e71b86f46151e, type: 3}
@@ -10968,7 +10970,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935558820}
   m_CullTransparentMesh: 1
-
 --- !u!1 &1973642154
 GameObject:
   m_ObjectHideFlags: 0
@@ -12421,3 +12422,6 @@ SceneRoots:
   - {fileID: 740129231}
   - {fileID: 414028175}
   - {fileID: 499029628}
+  - {fileID: 2095780456}
+  - {fileID: 1893680960}
+  - {fileID: 1519691478}
