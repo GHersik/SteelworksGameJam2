@@ -269,6 +269,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 800794974727814118, guid: d4637fb45fd2ffe4682fe6d764dcaf67, type: 3}
   m_PrefabInstance: {fileID: 732308556}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &365401946 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7498126965011125588, guid: d4637fb45fd2ffe4682fe6d764dcaf67, type: 3}
+  m_PrefabInstance: {fileID: 732308556}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &366660702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1006,14 @@ PrefabInstance:
     - target: {fileID: 5956839835991349618, guid: d4637fb45fd2ffe4682fe6d764dcaf67, type: 3}
       propertyPath: m_Name
       value: MusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182209698730226213, guid: d4637fb45fd2ffe4682fe6d764dcaf67, type: 3}
+      propertyPath: thirdChannel
+      value: 
+      objectReference: {fileID: 365401946}
+    - target: {fileID: 7498126965011125588, guid: d4637fb45fd2ffe4682fe6d764dcaf67, type: 3}
+      propertyPath: m_Volume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

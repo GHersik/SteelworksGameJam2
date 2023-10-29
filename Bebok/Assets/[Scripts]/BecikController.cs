@@ -54,6 +54,8 @@ public class BecikController : MonoBehaviour
         becikIsNotInHisPlace = true;
         carrier = _carrier;
         crySource.Play();
+
+        MusicManager.Instance.HardCoreTransition();
     }
 
     public void BecikPickedByFamily(Transform _carrier)
@@ -74,6 +76,8 @@ public class BecikController : MonoBehaviour
     {
         bebokController.speedModifier = 1f;
         carrier = null;
+
+        MusicManager.Instance.SoftCoreTransition();
     }
     IEnumerator AlertOthers()
     {
