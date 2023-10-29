@@ -12,6 +12,7 @@ public class MusicManager : SingletonPersistent<MusicManager> {
 
     [Header("Audio Clips")]
     [SerializeField] AudioClip backgroundMusic;
+    [SerializeField] AudioClip backgroundHardMusic;
     [SerializeField] AudioClip menuMusic;
 
     private void Start() {
@@ -19,13 +20,13 @@ public class MusicManager : SingletonPersistent<MusicManager> {
     }
 
     public void MainMenuTransition() {
-        firstChannel.DOFade(0, soundFadeTime);
-        secondChannel.DOFade(1,soundFadeTime);
+        firstChannel.DOFade(1, soundFadeTime);
+        secondChannel.DOFade(0,soundFadeTime);
     }
 
     public void NormalSceneTransition() {
-        firstChannel.DOFade(1, soundFadeTime);
-        secondChannel.DOFade(0, soundFadeTime);
+        firstChannel.DOFade(0, soundFadeTime);
+        secondChannel.DOFade(1, soundFadeTime);
     }
 
     public void HardCoreTransition() {
