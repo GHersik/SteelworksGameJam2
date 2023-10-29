@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Pot : MonoBehaviour {
     [SerializeField] ParticleSystem particleSystem;
-    //[SerializeField] AudioSource audioSource;
+    [SerializeField] AudioSource audioSource;
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Player")) {
             particleSystem.Play();
+            audioSource.Play();
         }  
     }
 
