@@ -805,6 +805,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1511447979}
     m_Modifications:
+    - target: {fileID: 1742883752129013272, guid: 469c004ce09acf54ebe5abf1e4471fa0, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 4179778084996127782, guid: 469c004ce09acf54ebe5abf1e4471fa0, type: 3}
       propertyPath: m_SortingOrder
       value: 8
@@ -1132,6 +1136,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1511447979}
     m_Modifications:
+    - target: {fileID: 1742883752129013272, guid: 469c004ce09acf54ebe5abf1e4471fa0, type: 3}
+      propertyPath: m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5984818075614741161, guid: 469c004ce09acf54ebe5abf1e4471fa0, type: 3}
       propertyPath: m_Name
       value: Pot
@@ -4464,6 +4472,10 @@ PrefabInstance:
     - target: {fileID: 2258170727036335235, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
       propertyPath: m_Radius
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2735906892684525911, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
+      propertyPath: speedModifierForBebok
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4425192385345075218, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
       propertyPath: m_audioClip
