@@ -81,7 +81,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 2
 --- !u!1 &7183880579559112336
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: 9aa1b09cfa6a49a4b9b22a7ee05a4b28, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -386,21 +386,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 152308628179705796}
     m_Modifications:
+    - target: {fileID: 3941968566680293031, guid: bf23e683709c1594faa1118bb2058c75, type: 3}
+      propertyPath: m_Radius
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4991410599857997453, guid: bf23e683709c1594faa1118bb2058c75, type: 3}
       propertyPath: m_Name
       value: SoundMaker
       objectReference: {fileID: 0}
     - target: {fileID: 5751626553766215002, guid: bf23e683709c1594faa1118bb2058c75, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.75
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5751626553766215002, guid: bf23e683709c1594faa1118bb2058c75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.83
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5751626553766215002, guid: bf23e683709c1594faa1118bb2058c75, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.55091965
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5751626553766215002, guid: bf23e683709c1594faa1118bb2058c75, type: 3}
       propertyPath: m_LocalRotation.w
