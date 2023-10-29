@@ -13,6 +13,6 @@ public class GameManager : Singleton<GameManager>
 
     public void LoseGame(){
         gameState = GameStates.Finished;
-        GameLost.Instance.ShowPanel();
+        //GameLost.Instance.ShowPanel();
     }
 }
