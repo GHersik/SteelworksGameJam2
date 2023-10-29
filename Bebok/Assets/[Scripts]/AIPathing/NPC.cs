@@ -19,15 +19,11 @@ public class NPC : MonoBehaviour {
         pathPoint = GetRandomTargetPoint();
         StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
     }
-<<<<<<< HEAD
     private void Update()
     {
         if (!agent.hasPath )
         {
-=======
-    private void Update() {
-        if (!agent.hasPath) {
->>>>>>> develop
+
             pathPoint = GetRandomTargetPoint();
             StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
         }
@@ -40,7 +36,6 @@ public class NPC : MonoBehaviour {
         StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
     }
 
-<<<<<<< HEAD
     public void SetPathToCraddle(Transform craddle)
     {
         pathPoint = craddle;
@@ -49,9 +44,7 @@ public class NPC : MonoBehaviour {
 
     void GoToDestination()
     {
-=======
-    void GoToDestination() {
->>>>>>> develop
+
         agent.SetDestination(new Vector3(pathPoint.position.x, pathPoint.position.y, 0));
     }
 
