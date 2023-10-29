@@ -22,31 +22,11 @@ public class GameOverCanvas : MonoBehaviour {
         quitGameButton.onClick.AddListener(QuitGameButton_clicked);
     }
 
-    private void Update() {
-        GatherInputs();
-    }
-
     private void MainMenuButton_clicked() => ScenesLoader.Instance.LoadMainMenu();
 
     private void LoadLevelAgain_clicked() => ScenesLoader.Instance.LoadCurrentLevel();
 
     private void QuitGameButton_clicked() => ScenesLoader.Instance.QuitGame();
-
-    void GatherInputs() {
-        if (GameManager.Instance.gameState == GameManager.GameStates.Finished)
-            return;
-
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            if (isActive) {
-                isActive = false;
-                HidePanel();
-            }
-            else {
-                isActive = true;
-                ShowPanel();
-            }
-        }
-    }
 
     private void ShowPanel() {
         loadingPanel.DOKill();
