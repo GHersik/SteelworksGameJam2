@@ -12,6 +12,7 @@ public class BebokController : MonoBehaviour
     [SerializeField] float energyRegenerationPerSecond = .2f;
     [SerializeField] float maxEnergy = 20f;
     [SerializeField] CircleCollider2D circleCollider;
+    bool inpuEnabledt = true;
     public float MaxEnergy
     {
         get { return maxEnergy; }
@@ -40,7 +41,7 @@ public class BebokController : MonoBehaviour
         currentMoveSpeed = moveSpeed;
         desiredMoveSpeed = moveSpeed;
         currentEnergy = maxEnergy;
-
+        inpuEnabledt = true;
         isInputActive = true;
     }
 
@@ -52,11 +53,14 @@ public class BebokController : MonoBehaviour
 
     private void Update()
     {
-        GatherInputs();
-        UpdateEnergy();
-        Move();
-        FlipDirection();
-        SprintAnimation();
+        if (inpuEnabledt)
+        {
+            GatherInputs();
+            UpdateEnergy();
+            Move();
+            FlipDirection();
+            SprintAnimation();
+        }
     }
 
     private void GatherInputs()
@@ -133,8 +137,9 @@ public class BebokController : MonoBehaviour
         {
             circleCollider.enabled = false;
             Debug.Log("Umiera");
-            animator.SetBool("isDead",true);
+            animator.SetBool("isDead", true);
             gameOverCanvas.ShowPanel();
+            inpuEnabledt = false;
             //Destroy(this);
         }
     }
