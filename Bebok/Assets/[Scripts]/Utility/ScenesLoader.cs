@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
 
-public class ScenesLoader : SingletonPersistent<ScenesLoader> {
+public class ScenesLoader : Singleton<ScenesLoader> {
     public enum Scene {
         MainMenu,
-        Journey
+        Level01,
+        Level02,
+        Level03,
     }
 
     [SerializeField] CanvasGroup loadingPanel;
@@ -17,7 +19,11 @@ public class ScenesLoader : SingletonPersistent<ScenesLoader> {
 
     public void LoadMainMenu() => StartCoroutine(LoadScene(Scene.MainMenu));
 
-    public void LoadNewGame() => StartCoroutine(LoadScene(Scene.Journey));
+    public void LoadNewGame() => StartCoroutine(LoadScene(Scene.Level01));
+
+    public void LoadLevel2() => StartCoroutine(LoadScene(Scene.Level02));
+
+    public void LoadLevel3() => StartCoroutine(LoadScene(Scene.Level03));
 
     private IEnumerator LoadScene(Scene scene) {
         Time.timeScale = 1;
