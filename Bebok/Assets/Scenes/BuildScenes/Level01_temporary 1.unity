@@ -1789,6 +1789,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037690499}
   m_CullTransparentMesh: 1
+--- !u!114 &1078954737 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7887526919875954863, guid: 1e6a30ec1953ad643bb4dbb7b274e2b0, type: 3}
+  m_PrefabInstance: {fileID: 2031249856}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad187a2e10bd6e4fbe3c68739f13209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1093368841
 GameObject:
   m_ObjectHideFlags: 0
@@ -4727,6 +4738,10 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 973844246}
+    - target: {fileID: 1948209073490427865, guid: a4b2dcf0f4985f64b84fb8a1f4246df9, type: 3}
+      propertyPath: bebokController
+      value: 
+      objectReference: {fileID: 1078954737}
     - target: {fileID: 8076386683540063457, guid: a4b2dcf0f4985f64b84fb8a1f4246df9, type: 3}
       propertyPath: m_Name
       value: Pit
