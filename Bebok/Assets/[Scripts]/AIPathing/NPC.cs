@@ -47,4 +47,10 @@ public class NPC : MonoBehaviour {
         yield return new WaitForSecondsRealtime(waiting);
         GoToDestination();
     }
+
+    public void SetPathToCraddle(Transform craddle)
+    {
+        pathPoint = craddle;
+        GoToDestination();
+    }
 }
