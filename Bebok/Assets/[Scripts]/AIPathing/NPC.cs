@@ -38,7 +38,7 @@ public class NPC : MonoBehaviour {
     }
 
     Transform GetRandomTargetPoint() {
-        int randomPoint = Random.Range(0, targetPoints.Count - 1);
+        int randomPoint = Random.Range(0, targetPoints.Count);
         pathPointController = targetPoints[randomPoint].GetComponent<PathPointController>();
         return targetPoints[randomPoint];
     }
