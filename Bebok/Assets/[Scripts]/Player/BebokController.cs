@@ -12,7 +12,7 @@ public class BebokController : MonoBehaviour
     [SerializeField] float energyRegenerationPerSecond = .2f;
     [SerializeField] float maxEnergy = 20f;
     [SerializeField] CircleCollider2D circleCollider;
-    bool inpuEnabledt = true;
+    public bool inpuEnabledt = true;
     public float MaxEnergy
     {
         get { return maxEnergy; }

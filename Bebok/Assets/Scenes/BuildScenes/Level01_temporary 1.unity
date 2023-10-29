@@ -4485,38 +4485,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1505627389745888640, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505627389745888640, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1505627389745888640, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2193812379579532887, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2236467769612643545, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
-      propertyPath: m_SortingOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2258170727036335235, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
-      propertyPath: m_Radius
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4425192385345075218, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: c73d2981180ef524589b81d1e1ab4637, type: 3}
-    - target: {fileID: 4425192385345075218, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4956271914821287325, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
       propertyPath: craddleLocalization
       value: 
@@ -4524,10 +4492,6 @@ PrefabInstance:
     - target: {fileID: 7183880579559112336, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
       propertyPath: m_Name
       value: Becik
-      objectReference: {fileID: 0}
-    - target: {fileID: 7890410195261230717, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
-      propertyPath: m_Radius
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4894,6 +4858,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1948209073490427865, guid: a4b2dcf0f4985f64b84fb8a1f4246df9, type: 3}
+      propertyPath: gameOverCanvas
+      value: 
+      objectReference: {fileID: 973844246}
     - target: {fileID: 8076386683540063457, guid: a4b2dcf0f4985f64b84fb8a1f4246df9, type: 3}
       propertyPath: m_Name
       value: Pit

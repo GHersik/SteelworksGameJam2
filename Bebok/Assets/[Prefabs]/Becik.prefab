@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb1ca349d230ebb4c98538ca04ded618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedModifierForBebok: 0.9
+  speedModifierForBebok: 0.975
   carrier: {fileID: 0}
   crySource: {fileID: 4425192385345075218}
   noiseMaker: {fileID: 2193812379579532887}
@@ -292,8 +292,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: c73d2981180ef524589b81d1e1ab4637, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -388,7 +388,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3941968566680293031, guid: bf23e683709c1594faa1118bb2058c75, type: 3}
       propertyPath: m_Radius
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4991410599857997453, guid: bf23e683709c1594faa1118bb2058c75, type: 3}
       propertyPath: m_Name
