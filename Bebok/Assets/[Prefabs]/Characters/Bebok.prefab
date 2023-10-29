@@ -115,7 +115,7 @@ MonoBehaviour:
   fadeAmount: 0.3
   fadeTime: 3
   sprite: {fileID: 6338241962143879853}
-  enemyChaser: {fileID: 0}
+  enemyChaser: {fileID: 730589025406085410}
   becik: {fileID: 0}
 --- !u!70 &506356982720026531
 CapsuleCollider2D:
@@ -425,7 +425,7 @@ SpriteRenderer:
   m_SortingOrder: 3
   m_Sprite: {fileID: -630534670, guid: 6dd0c29620e53dc44a5d278c72ce7942, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3.4204898, y: 6.8900003}

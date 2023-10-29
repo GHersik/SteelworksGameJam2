@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/BuildScenes/MainMenu.unity
     guid: 32d1da6b6cee7504680c0b97ce3ffc5d
   - enabled: 1
     path: Assets/Scenes/AIPathing.unity
