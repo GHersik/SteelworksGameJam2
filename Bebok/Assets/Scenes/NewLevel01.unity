@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_Size: {x: 15.28783, y: 1.607816, z: 4}
   m_Center: {x: 6.394712, y: -0.3039081, z: 0}
   m_Area: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: 00000000
 --- !u!1 &189217585
 GameObject:
   m_ObjectHideFlags: 0
@@ -4709,7 +4709,7 @@ MonoBehaviour:
   m_Size: {x: 4.561611, y: 1.607816, z: 4}
   m_Center: {x: 1.031603, y: -0.3039081, z: 0}
   m_Area: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: 00000000
 --- !u!1001 &783114942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5402,7 +5402,7 @@ MonoBehaviour:
   m_Size: {x: 0.7407684, y: 10.21168, z: 4}
   m_Center: {x: -0.8788185, y: -2.714028, z: 0}
   m_Area: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: 00000000
 --- !u!1 &857420986
 GameObject:
   m_ObjectHideFlags: 0
@@ -7837,7 +7837,7 @@ MonoBehaviour:
   m_Size: {x: 0.7407684, y: 3.610826, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
   m_Area: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: 00000000
 --- !u!61 &1316832008
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8738,7 +8738,7 @@ MonoBehaviour:
   m_Size: {x: 0.7407684, y: 10.21168, z: 4}
   m_Center: {x: -0.8788185, y: -2.714028, z: 0}
   m_Area: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: 00000000
 --- !u!198 &1443096995 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7196363766576161457, guid: 9c21b074ccbea834d8d3b8c8b6682cc1, type: 3}
@@ -9756,7 +9756,7 @@ MonoBehaviour:
   m_Size: {x: 6.661512, y: 4.073755, z: 4}
   m_Center: {x: 2.081553, y: -1.536878, z: 0}
   m_Area: 1
-  m_AffectedAgents: ffffffff
+  m_AffectedAgents: 00000000
 --- !u!1 &1547166460
 GameObject:
   m_ObjectHideFlags: 0
