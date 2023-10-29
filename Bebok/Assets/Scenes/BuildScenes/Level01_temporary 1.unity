@@ -1061,7 +1061,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3555,6 +3555,14 @@ PrefabInstance:
     - target: {fileID: 2258170727036335235, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
       propertyPath: m_Radius
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4425192385345075218, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c73d2981180ef524589b81d1e1ab4637, type: 3}
+    - target: {fileID: 4425192385345075218, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4956271914821287325, guid: 4280a50ff590773479c51c035e4c10d0, type: 3}
       propertyPath: craddleLocalization

@@ -67,7 +67,7 @@ public class BecikController : MonoBehaviour
         this.transform.position = craddlePlace.position;
         becikIsNotInHisPlace = false;
         carrier = null;
-        crySource.Play();
+        crySource.Stop();
     }
 
     public void PutBecikDown(BebokController bebokController)
