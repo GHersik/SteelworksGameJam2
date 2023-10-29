@@ -18,19 +18,14 @@ public class NPC : MonoBehaviour
         pathPointsCollection = FindAnyObjectByType<PathPointsCollection>();
         targetPoints = pathPointsCollection.ListPoints();
         agent = GetComponent<NavMeshAgent>();
-        pathPoint = GetRandomTargetPoint();
-        StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
+        //pathPoint = GetRandomTargetPoint();
+        //StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
     }
     private void Update()
     {
-        if (pathPoint == null)
+        if (!agent.hasPath)
         {
-            pathPoint = GetRandomTargetPoint();
-            StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
-        }
-        else if (!agent.hasPath)
-        {
-            pathPoint = null;
+            GetRandomTargetPoint();
         }
 
         animator.SetBool("isWalking", agent.hasPath);
@@ -39,7 +34,8 @@ public class NPC : MonoBehaviour
     public void SetPathToBebok(Transform bebok)
     {
         pathPoint = bebok;
-        StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
+        GoToDestination();
+        //StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
     }
 
     void GoToDestination()
@@ -48,11 +44,14 @@ public class NPC : MonoBehaviour
             agent.SetDestination(new Vector3(pathPoint.position.x, pathPoint.position.y, 0));
     }
 
-    Transform GetRandomTargetPoint()
+    void  GetRandomTargetPoint()
     {
         int randomPoint = Random.Range(0, targetPoints.Count);
+        Debug.Log(1);
         pathPointController = targetPoints[randomPoint].GetComponent<PathPointController>();
-        return targetPoints[randomPoint];
+        StartCoroutine(WaitNearPoint(pathPointController == null ? 1f : pathPointController.WaitingFarThisPoint()));
+        pathPoint= targetPoints[randomPoint];
+        GoToDestination();
     }
 
     IEnumerator WaitNearPoint(float waiting)
