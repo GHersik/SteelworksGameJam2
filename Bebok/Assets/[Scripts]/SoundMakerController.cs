@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SoundMakerController : MonoBehaviour
@@ -11,8 +12,10 @@ public class SoundMakerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 6)
+        Debug.Log(collision.gameObject.name);
+         if (collision.gameObject.layer == 6)
         {
+
             collision.gameObject.GetComponent<NPC>().SetPathToBebok(this.transform);
         }
     }

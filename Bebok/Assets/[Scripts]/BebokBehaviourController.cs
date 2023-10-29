@@ -14,7 +14,7 @@ public class BebokBehaviourController : MonoBehaviour
         if (Input.GetKey(KeyCode.E) && becikCanBePickedUp)
         {
             var becikController = becik.GetComponent<BecikController>();
-            //becikController.TransportChild(this.transform,beb);
+            becikController.TransportChild(this.transform);
         }
     }
 

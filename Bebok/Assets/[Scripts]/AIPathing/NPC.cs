@@ -22,7 +22,7 @@ public class NPC : MonoBehaviour {
 <<<<<<< HEAD
     private void Update()
     {
-        if (!agent.hasPath )
+        if (!agent.hasPath)
         {
 =======
     private void Update() {
@@ -41,12 +41,15 @@ public class NPC : MonoBehaviour {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public void SetPathToCraddle(Transform craddle)
     {
         pathPoint = craddle;
         GoToDestination();
     }
 
+=======
+>>>>>>> parent of d3e71b0 (dwadawda)
     void GoToDestination()
     {
 =======
@@ -65,5 +68,4 @@ public class NPC : MonoBehaviour {
         yield return new WaitForSecondsRealtime(waiting);
         GoToDestination();
     }
-
 }
