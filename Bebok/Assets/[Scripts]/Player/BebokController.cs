@@ -11,6 +11,7 @@ public class BebokController : MonoBehaviour
     [SerializeField] float energyLossPerSecond = 1f;
     [SerializeField] float energyRegenerationPerSecond = .2f;
     [SerializeField] float maxEnergy = 20f;
+    [SerializeField] CircleCollider2D circleCollider;
     public float MaxEnergy
     {
         get { return maxEnergy; }
@@ -20,6 +21,7 @@ public class BebokController : MonoBehaviour
     [Header("Animation Settings")]
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] GameOverCanvas gameOverCanvas;
 
     private float currentEnergy;
     public float CurrentEnergy
@@ -123,5 +125,17 @@ public class BebokController : MonoBehaviour
             animator.SetBool("isSprinting", true);
         else
             animator.SetBool("isSprinting", false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            circleCollider.enabled = false;
+            Debug.Log("Umiera");
+            animator.SetBool("isDead",true);
+            gameOverCanvas.ShowPanel();
+            //Destroy(this);
+        }
     }
 }
