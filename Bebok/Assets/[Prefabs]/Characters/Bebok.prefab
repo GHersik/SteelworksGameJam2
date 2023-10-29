@@ -165,6 +165,7 @@ GameObject:
   - component: {fileID: 6486994508640912832}
   - component: {fileID: 7887526919875954863}
   - component: {fileID: 2480827785616678176}
+  - component: {fileID: 7862264452899899872}
   m_Layer: 3
   m_Name: Bebok
   m_TagString: Player
@@ -239,6 +240,7 @@ MonoBehaviour:
   energyLossPerSecond: 12
   energyRegenerationPerSecond: 3
   maxEnergy: 20
+  circleCollider: {fileID: 2480827785616678176}
   animator: {fileID: 6981662757653100096}
   spriteRenderer: {fileID: 6338241962143879853}
 --- !u!58 &2480827785616678176
@@ -276,6 +278,41 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!58 &7862264452899899872
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2752464338969884671}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6
 --- !u!1 &6385718652344356277
 GameObject:
   m_ObjectHideFlags: 0
