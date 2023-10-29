@@ -5,8 +5,11 @@ public class InteractableObject : MonoBehaviour, IInteractable
 {
     [Header("Settings")]
     [SerializeField] float interactionTime;
+    [SerializeField] float malfunctionTime;
     [SerializeField] GameObject noiseMaker;
+    [SerializeField] AudioSource malfunctionAudio;
     bool canBeUsed = true;
+    bool malfunctioned = false;
     public float InteractionTime
     {
         get { return interactionTime; }
@@ -18,10 +21,11 @@ public class InteractableObject : MonoBehaviour, IInteractable
     [SerializeField] ParticleSystem particles;
     [SerializeField] SpriteRenderer outlineSprite;
     [SerializeField] Color outlineColor;
+    [SerializeField] Color malfunctionColor;
+    [SerializeField] ParticleSystem malfunctionParticles;
 
     public void InteractInterrupted()
     {
-        // Debug.Log("Interaction with the object interrupted!");
         particles.Stop();
         noiseMaker.SetActive(false);
         canBeUsed = false;
@@ -36,34 +40,67 @@ public class InteractableObject : MonoBehaviour, IInteractable
             particles.Play();
             noiseMaker.SetActive(true);
             StartCoroutine(CanBeUsedAgain());
-        }// Debug.Log("I have came into interaction with the player!");
+        }
     }
 
     public void InteractEnd()
     {
-        //Debug.Log("Interaction with the object is concluded!");
         particles.Stop();
         noiseMaker.SetActive(false);
         canBeUsed = false;
+        StartMalfunction();
         StartCoroutine(CanBeUsedAgain());
     }
 
     public void HighLight()
     {
-        //Debug.Log("I am being highlighted!");
         outlineColor.a = 1;
         outlineSprite.color = outlineColor;
     }
 
     public void LowLight()
     {
-        //Debug.Log("I am not highlighted anymore!");
         outlineColor.a = 0;
         outlineSprite.color = outlineColor;
     }
 
+    public bool CheckIfCanBeUsed()
+    {
+        return canBeUsed;
+    }
     IEnumerator CanBeUsedAgain()
     {
         yield return new WaitForSecondsRealtime(InteractionTime * 2);
+    }
+
+    void StartMalfunction()
+    {
+        malfunctionParticles.Play();
+        malfunctionAudio.Play();
+        StartCoroutine(MalfunctionNoise());
+        StartCoroutine(MalfanctionDuration());
+        noiseMaker.SetActive(false);
+    }
+
+    void EndMalfunction()
+    {
+        malfunctionParticles.Stop();
+        malfunctionAudio.Stop();
+        malfunctioned = false;
+    }
+
+    IEnumerator MalfanctionDuration()
+    {
+        yield return new WaitForSecondsRealtime(malfunctionTime);
+        EndMalfunction();
+    }
+    IEnumerator MalfunctionNoise()
+    {
+        for(int i = 0; i<malfunctionTime/.5f; i++) 
+        {
+            noiseMaker.SetActive(true);
+            yield return new WaitForSecondsRealtime(.5f);
+            noiseMaker.SetActive(false);
+        }
     }
 }
