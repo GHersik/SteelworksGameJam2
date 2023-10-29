@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class ScenesLoader : Singleton<ScenesLoader> {
     public enum Scene {
@@ -19,11 +20,20 @@ public class ScenesLoader : Singleton<ScenesLoader> {
 
     public void QuitGame() => Application.Quit();
 
-    public void LoadMainMenu() => StartCoroutine(LoadScene(Scene.MainMenu));
+    public void LoadMainMenu() {
+        currentScene = Scene.MainMenu;
+        StartCoroutine(LoadScene(Scene.MainMenu));
+    }
 
-    public void LoadCurrentLevel() => StartCoroutine(LoadScene(currentScene));
+    public void LoadCurrentLevel() {
+        currentScene = Scene.Level01;
+        StartCoroutine(LoadScene(currentScene));
+    }
 
-    public void LoadNewGame() => StartCoroutine(LoadScene(Scene.Level01));
+    public void LoadNewGame() {
+        currentScene = Scene.Level01;
+        StartCoroutine(LoadScene(Scene.Level01));
+    }
 
     public void LoadLevel2() => StartCoroutine(LoadScene(Scene.Level02));
 
@@ -37,7 +47,6 @@ public class ScenesLoader : Singleton<ScenesLoader> {
         else
             MusicManager.Instance.NormalSceneTransition();
 
-        Time.timeScale = 1;
         ShowPanel();
 
         yield return new WaitForSeconds(1f);

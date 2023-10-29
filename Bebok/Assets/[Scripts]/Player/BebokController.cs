@@ -21,6 +21,7 @@ public class BebokController : MonoBehaviour
     [Header("Animation Settings")]
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] GameOverCanvas gameOverCanvas;
 
     private float currentEnergy;
     public float CurrentEnergy
@@ -132,7 +133,9 @@ public class BebokController : MonoBehaviour
         {
             circleCollider.enabled = false;
             Debug.Log("Umiera");
-            Destroy(this);
+            animator.SetBool("isDead",true);
+            gameOverCanvas.ShowPanel();
+            //Destroy(this);
         }
     }
 }

@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,10 +29,9 @@ public class GameOverCanvas : MonoBehaviour {
 
     private void QuitGameButton_clicked() => ScenesLoader.Instance.QuitGame();
 
-    private void ShowPanel() {
+    public void ShowPanel() {
         loadingPanel.DOKill();
         loadingPanel.DOFade(1, fadeTime).SetUpdate(true).OnComplete(SetInteractable);
-        Time.timeScale = 0;
     }
 
     private void SetInteractable() {
@@ -39,8 +39,7 @@ public class GameOverCanvas : MonoBehaviour {
         loadingPanel.blocksRaycasts = true;
     }
 
-    private void HidePanel() {
-        Time.timeScale = 1;
+    public void HidePanel() {
         loadingPanel.DOKill();
         loadingPanel.DOFade(0, fadeTime).SetUpdate(true).OnComplete(SetNotInteractable); ;
     }
@@ -52,5 +51,7 @@ public class GameOverCanvas : MonoBehaviour {
 
     private void OnDisable() {
         DOTween.Kill(loadingPanel);
+        Time.timeScale = 1;
+        HidePanel();
     }
 }
