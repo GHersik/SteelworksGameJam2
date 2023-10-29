@@ -1,0 +1,11 @@
+diff a/Bebok/Assets/[Scripts]/AIPathing/NPC.cs b/Bebok/Assets/[Scripts]/AIPathing/NPC.cs	(rejected hunks)
+@@ -3,7 +3,8 @@
+ using UnityEngine;
+ using UnityEngine.AI;
+ 
+-public class NPC : MonoBehaviour {
++public class NPC : MonoBehaviour
++{
+     [SerializeField] Transform pathPoint;
+     [SerializeField] List<Transform> targetPoints;
+     [SerializeField] PathPointsCollection pathPointsCollection;
