@@ -26,6 +26,11 @@ public class ScenesLoader : Singleton<ScenesLoader> {
     public void LoadLevel3() => StartCoroutine(LoadScene(Scene.Level03));
 
     private IEnumerator LoadScene(Scene scene) {
+        if (scene == Scene.MainMenu)
+            MusicManager.Instance.MainMenuTransition();
+        else
+            MusicManager.Instance.NormalSceneTransition();
+
         Time.timeScale = 1;
         ShowPanel();
 
