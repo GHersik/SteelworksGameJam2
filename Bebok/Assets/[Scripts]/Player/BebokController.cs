@@ -39,7 +39,7 @@ public class BebokController : MonoBehaviour {
 
     public void SetInput(bool state) {
         isInputActive = state;
-        Debug.Log(isInputActive);
+      //  Debug.Log(isInputActive);
     }
 
     private void Update() {
@@ -54,7 +54,7 @@ public class BebokController : MonoBehaviour {
         if (!isInputActive) {
             moveX = 0;
             moveY = 0;
-            Debug.Log("Cannot interact!");
+            //Debug.Log("Cannot interact!");
             return;
         }
 
